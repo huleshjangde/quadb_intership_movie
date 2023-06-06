@@ -13,28 +13,28 @@ const Summary = () => {
     <div className='w-screen h-screen relative'>
       {movie ? (
         <>
-        <div className='w-screen h-screen flex  flex-col-reverse md:flex-row overflow-scroll py-8 px-8 md:px-28 gap-5 items-center md:py-20 '>
-          <div className='flex flex-col gap-5 items-center md:items-start'>
-          <h2 className='text-2xl font-bold'>{movie.show.name}</h2>
+        <div className='w-screen h-screen flex  flex-col-reverse  lg:flex-row overflow-scroll py-8 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start'>
+          <div className='flex flex-col gap-5 items-center lg:items-start md:text-center'>
+          <h2 className='text-2xl md:text-3xl font-bold'>{movie.show.name}</h2>
           <div>
-            <p className="time flex">
+            <p className="time flex md:text-lg md:font-medium">
               {movie.show.schedule.time }  <span className='ml-3'>  {movie.show.schedule.days}  </span>
              
             </p>
             
           </div>
-          <div className='flex gap-2  md:gap-5 font-semibold text-base'>
+          <div className='flex gap-2 md:gap-3  lg:gap-5 font-semibold text-base lg:text-base md:text-xl'>
           <p>Category: {movie.show.genres?.join(', ')}</p>
           <p>Language: {movie.show.language}</p>
           </div>
-          <p className='text-base' dangerouslySetInnerHTML={{ __html: movie.show.summary }}></p>
-          <Link to={`/bookshow/${movie.show.id}`} className='text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-1 px-4 sticky bottom-0'>Book Ticket</Link>
+          <p className='text-base md:text-xl lg:text-base lg:text-left' dangerouslySetInnerHTML={{ __html: movie.show.summary }}></p>
+          <Link to={`/bookshow/${movie.show.id}`} className='text-lg lg:text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-1 px-4 lg:px-4 lg:py-1 sticky bottom-0 md:text-2xl md:p-4'>Book Ticket</Link>
 
           </div>
           
 
 
-          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-full h-full md:w-1/3 shadow-2xl rounded-2xl'/>
+          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-full h-full lg:h-full md:h-auto md:w-4/5 lg:w-1/3 shadow-2xl rounded-2xl'/>
           
          
           
