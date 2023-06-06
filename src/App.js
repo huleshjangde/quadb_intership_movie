@@ -1,5 +1,5 @@
 import './App.css';
-import MovieCard from './components/MovieCard';
+import MovieCard from './pages/MovieCard';
 import BookTicket from './pages/BookTicket';
 import Summry from './pages/Summry';
 import { Routes, Route } from "react-router-dom"

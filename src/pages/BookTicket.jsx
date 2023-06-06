@@ -66,16 +66,17 @@ const [selectedOption, setSelectedOption] = useState(' ');
 
 
 
-
+  if (!movie) {
+    // Movie not found, display an error message or redirect to a 404 page
+    return <div>Error: Movie not found</div>;
+  }
 
   return (
 
     
     <>
-<div className=' w-screen h-screen flex justify-center items-center'>
-
-
-   
+       
+       <div className=' w-screen h-screen flex justify-center items-center'>
       <form onSubmit={handleSubmit} className=' w-full md:w-full lg:w-1/2  border h-full md:h-full py-5 rounded-xl bg-slate-100 flex flex-col gap-3 justify-center items-center'>
       <h2 className='text-2xl font-bold'>{movie.show.name}</h2>
       <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-4/5 h-auto lg:w-1/3 shadow-2xl rounded-2xl'/>
