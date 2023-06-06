@@ -10,7 +10,6 @@ function App() {
   return (
    <>
 
-
 <Routes>
   <Route path='/' element={<MovieCard/>}/>
         <Route path="/summary/:id" element={ <Summry/> } />

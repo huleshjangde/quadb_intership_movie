@@ -1,5 +1,8 @@
 import React, { useState,useContext} from 'react';
 import { useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import { ApiContext } from '../usecontext/usecontext';
 
@@ -54,6 +57,8 @@ const [selectedOption, setSelectedOption] = useState(' ');
           MovieId: '',
           seatType: ''
         });
+
+        toast.success('Ticket booked successfully!');
       };
 
 
@@ -76,6 +81,7 @@ const [selectedOption, setSelectedOption] = useState(' ');
 
     
     <>
+    <ToastContainer />
        
        <div className=' w-screen h-screen flex justify-center items-center'>
       <form onSubmit={handleSubmit} className=' w-full md:w-full lg:w-1/2  border h-full md:h-full py-5 rounded-xl bg-slate-100 flex flex-col gap-3 justify-center items-center'>

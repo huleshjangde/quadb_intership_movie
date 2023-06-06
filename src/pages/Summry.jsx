@@ -14,7 +14,7 @@ const Summary = () => {
       {movie ? (
         <>
         <div className='w-screen h-screen flex  flex-col-reverse  lg:flex-row overflow-scroll py-8 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start'>
-          <div className='flex flex-col gap-5 items-center lg:items-start md:text-center'>
+          <div className='flex flex-col gap-2 items-center lg:items-start md:text-center'>
           <h2 className='text-2xl md:text-3xl font-bold'>{movie.show.name}</h2>
           <div>
             <p className="time flex md:text-lg md:font-medium">
@@ -27,8 +27,9 @@ const Summary = () => {
           <p>Category: {movie.show.genres?.join(', ')}</p>
           <p>Language: {movie.show.language}</p>
           </div>
+          <p className='text-lg font-medium border border-gray-400 p-2 shadow-lg'>Summary</p>
           <p className='text-base md:text-xl lg:text-base lg:text-left' dangerouslySetInnerHTML={{ __html: movie.show.summary }}></p>
-          <Link to={`/bookshow/${movie.show.id}`} className='text-lg lg:text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-1 px-4 lg:px-4 lg:py-1 sticky bottom-0 md:text-2xl md:p-4'>Book Ticket</Link>
+          <Link to={`/bookshow/${movie.show.id}`} className='text-2xl lg:text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-2 px-4 lg:px-4 lg:py-1 sticky bottom-0  left-0  md:text-2xl md:p-4'>Book Ticket</Link>
 
           </div>
           
