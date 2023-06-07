@@ -106,7 +106,7 @@ const [selectedOption, setSelectedOption] = useState(' ');
               placeholder='Enter Name'
               value={userData.name}
               onChange={handleChange}
-              className='md:w-1/2 w-full border border-gray-300 rounded p-2 mt-2 text-sm text-gray-900 outline-blue-400'
+              className='md:w-1/2 w-full border border-gray-300 rounded p-3 mt-2 text-sm text-gray-900 outline-blue-400'
             />
           </div>
           <div className='w-4/5 md:1/2 md:flex md:justify-center '>
@@ -118,7 +118,7 @@ const [selectedOption, setSelectedOption] = useState(' ');
               placeholder='Enter Mobile Number'
               value={userData.mobile}
               onChange={handleChange}
-              className='md:w-1/2 w-full border border-gray-300 rounded p-2 mt-2 text-sm text-gray-900 outline-blue-400'
+              className='md:w-1/2 w-full border border-gray-300 rounded p-3 mt-2 text-sm text-gray-900 outline-blue-400'
             />
           </div>
           

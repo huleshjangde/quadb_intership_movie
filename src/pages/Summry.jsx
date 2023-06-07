@@ -13,7 +13,7 @@ const Summary = () => {
     <div className='w-screen h-screen relative'>
       {movie ? (
         <>
-        <div className='w-screen h-screen flex  flex-col-reverse  lg:flex-row overflow-scroll py-8 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start'>
+        <div className='w-screen h-screen flex  flex-col-reverse  lg:flex-row overflow-scroll py-3 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start'>
           <div className='flex flex-col gap-2 items-center lg:items-start md:text-center'>
           <h2 className='text-2xl md:text-3xl font-bold'>{movie.show.name}</h2>
           <div>
@@ -35,7 +35,7 @@ const Summary = () => {
           
 
 
-          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-4/6 h-auto lg:h-full md:h-auto md:w-4/5 lg:w-1/3 shadow-2xl rounded-2xl'/>
+          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-4/5 h-auto lg:h-full md:h-auto md:w-4/5 lg:w-1/3 shadow-2xl rounded-2xl'/>
           
          
           
