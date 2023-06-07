@@ -1,5 +1,5 @@
 import React, { useState,useContext} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,6 +8,7 @@ import { ApiContext } from '../usecontext/usecontext';
 
 
 const BookTicket = () => {
+  const navigate = useNavigate();
 
     const movies = useContext(ApiContext);
 const {id} = useParams();
@@ -59,6 +60,10 @@ const [selectedOption, setSelectedOption] = useState(' ');
         });
 
         toast.success('Ticket booked successfully!');
+        setTimeout(()=>{
+          navigate('/')
+        },2000)
+        
       };
 
 
