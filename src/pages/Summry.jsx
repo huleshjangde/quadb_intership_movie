@@ -35,7 +35,7 @@ const Summary = () => {
           
 
 
-          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-full h-full lg:h-full md:h-auto md:w-4/5 lg:w-1/3 shadow-2xl rounded-2xl'/>
+          <img src={movie.show.image?.medium} alt={movie.show.name}  className='w-4/6 h-auto lg:h-full md:h-auto md:w-4/5 lg:w-1/3 shadow-2xl rounded-2xl'/>
           
          
           

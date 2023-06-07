@@ -144,7 +144,7 @@ const [selectedOption, setSelectedOption] = useState(' ');
 
           <button
             type='submit'
-            className=' w-2/5 mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
+            className='w-4/5 md:w-2/5  mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
           >
             Book Ticket
           </button>
