@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ApiContext } from '../usecontext/usecontext';
+import { motion } from 'framer-motion';
+
 
 const Summary = () => {
   const movies = useContext(ApiContext);
@@ -8,14 +10,25 @@ const Summary = () => {
 
   // Find the movie based on the id
   const movie = movies.find(movie => movie.show.id === parseInt(id));
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+  };
 
   return (
-    <div className='w-screen h-screen relative bg-slate-100'>
+    <div className='w-full h-full md:w-screen md:h-screen relative bg-slate-100'>
       {movie ? (
         <>
-        <div className='w-screen h-screen flex  flex-col-reverse  lg:flex-row overflow-scroll py-3 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start justify-center'>
+     <motion.div
+            className='w-full h-full flex flex-col-reverse lg:flex-row overflow-scroll py-3 px-8 lg:px-28 gap-5 items-center lg:py-20 md:w-full md:text-center lg:text-start justify-center'
+            initial="initial" animate="animate" variants={fadeIn}
+          >
           <div className='flex flex-col gap-2 items-center lg:items-start md:text-center'>
-          <h2 className='text-2xl md:text-3xl font-bold'>{movie.show.name}</h2>
+          <motion.h2
+                className='text-2xl md:text-3xl font-bold'
+                initial="initial" animate="animate" variants={fadeIn}
+              >
+                {movie.show.name} </motion.h2>
           <div>
             <p className="time flex md:text-lg md:font-medium">
               {movie.show.schedule.time }  <span className='ml-3'>  {movie.show.schedule.days}  </span>
@@ -29,8 +42,8 @@ const Summary = () => {
           </div>
           <p className='text-base md:text-lg font-medium border border-gray-400 py-1 px-3 md:p-2 shadow-lg'>Summary</p>
           <p className='text-base md:text-xl lg:text-base lg:text-left' dangerouslySetInnerHTML={{ __html: movie.show.summary }}></p>
-          <Link to={`/bookshow/${movie.show.id}`} className='text-1xl lg:text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-2 px-4 lg:px-4 lg:py-1 sticky bottom-0  left-0  md:text-2xl md:p-4'>Book Ticket</Link>
-
+          <Link to={`/bookshow/${movie.show.id}`} className='text-1xl lg:text-lg font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg w-full text-center py-2 px-4 lg:px-4 lg:py-1  md:text-2xl md:p-4 '>Book Ticket</Link>
+      
           </div>
           
 
@@ -39,7 +52,7 @@ const Summary = () => {
           
          
           
-          </div>
+          </motion.div>
         </>
         
       ) : (
